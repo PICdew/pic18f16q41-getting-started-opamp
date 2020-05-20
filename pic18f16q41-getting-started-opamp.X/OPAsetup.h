@@ -29,7 +29,7 @@ extern "C" {
 #define SET_OPA_EXT_SETUP   CLEAR_OPA_CONFIG; OPA1CON1 = 0x00; OPA1CON2 = 0x22; OPA1CON3 = 0x00; OPA1HWC = 0x00; OPA1ORS = 0x00; OPA1CON0 = 0x80
 
 //Set the gain
-#define SET_GAIN(X) OPA1CON1bits.GSEL = X;
+#define SET_GAIN(X) OPA1CON1bits.GSEL = X
             
     /** Enumeration for setupOPA */
     typedef enum { UNITY_GAIN = 0, NON_INVERTING,
