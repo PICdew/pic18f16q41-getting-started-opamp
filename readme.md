@@ -2,7 +2,7 @@
 <a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300"/></a>
 
 # Getting Started with the OPA module on the PIC18F16Q41
-The Operational Amplifier (OPA) module on the PIC18F6Q41 is an embedded operational amplifier with an internal resistor ladder. This code example demonstrates the OPA module switching between the 4 different configurations - Unity Gain, Non-Inverting, Inverting, and Custom (external parts).
+The Operational Amplifier (OPA) module on the PIC18F6Q41 is an embedded operational amplifier with an internal resistor ladder. This code example demonstrates the OPA module switching between the 4 different configurations - Unity Gain, Non-Inverting, Inverting, and External.
 
 ## Related Documentation
 
