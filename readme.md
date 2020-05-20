@@ -1,41 +1,76 @@
 <!-- Please do not change this html logo with link -->
 <a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300"/></a>
 
-# Update the title for [ADD_REPO_NAME_HERE] here
-
-<!-- This is where the introduction to the example goes, including mentioning the peripherals used -->
+# Getting Started with the OPA module on the PIC18F16Q41
+The Operational Amplifier (OPA) module on the PIC18F6Q41 is an embedded operational amplifier with an internal resistor ladder. This code example demonstrates the OPA module switching between the 4 different configurations - Unity Gain, Non-Inverting, Inverting, and Custom (external parts).
 
 ## Related Documentation
 
-<!-- Any information about an application note or tech brief can be linked here. Use unbreakable links!
-     In addition a link to the device family landing page and relevant peripheral pages as well:
-     - [AN3381 - Brushless DC Fan Speed Control Using Temperature Input and Tachometer Feedback](https://microchip.com/00003381/)
-     - [PIC18F-Q10 Family Product Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family) -->
+<a href="https://www.microchip.com/wwwproducts/en/PIC18F16Q41">PIC18F16Q41 Product Information</a><br>
+TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
+TBxxxx, "Optimizing Internal Operational Amplifiers for Analog Signal Conditioning"
 
 ## Software Used
 
-<!-- All software used in this example must be listed here. Use unbreakable links!
-     - MPLAB® X IDE 5.30 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-     - MPLAB® XC8 2.10 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-     - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) -->
+* <a href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB® IDE 5.40 or newer</a>
+* <a href="https://www.microchip.com/mplab/compilers">Microchip XC8 Compiler 2.20 or newer</a>
+* <a href="https://www.microchip.com/mplab/mplab-code-configurator">MPLAB® Code Configurator (MCC) 3.95.0 or newer</a>
 
 ## Hardware Used
 
-<!-- All hardware used in this example must be listed here. Use unbreakable links!
-     - PIC18F47Q10 Curiosity Nano [(DM182029)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
-     - Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
-     - POT Click board™ [(MIKROE-3402)](https://www.mikroe.com/pot-click) -->
+* <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137"> Microchip Curiosity Development Board (DM164137) </a>
+* Variable Power Supply (0 - 5V) or Potentiometer
+  * To use the built-in potentiometer on the Curiosity board, use a wire to move it from RC0 to the desired input.
+* Parts for an external operational amplifier configuration (resistors, capacitors, etc...)
 
 ## Setup
 
-<!-- Explain how to connect hardware and set up software. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+#### External Parts
+
+| Pin | Function
+| --- | --------
+| RA2 | Input for Unity Gain, Inverting, and Non-Inverting Configurations
+| RB5 | Non-Inverting Input for External Configuration
+| RB4 | Inverting Input for External Configuration
+| RC2 | OPA Module Output
+
+#### Parts on the Curiosity
+
+| Pin | Function
+| --- | --------
+| RA4 | LED D4 - Configuration Indicator Bit 0
+| RA0 | LED D5 - Configuration Indicator Bit 1
+| RA2 | LED D6 - Not used, see note below
+| RA5 | LED D7 - 2 Hz blinking light
+| RC4 | S1 - Pushbutton Switch
+| RC0 | *(if used)* Potentiometer on the Curiosity board
+
+Note: LED D6 (RA2) changes intensity with the input. The potentiometer is not adversely affected by the LED on the pin in this case.
+
+#### Internal Configurations Wiring
+For the 3 internal configurations (unity gain, non-inverting, and inverting), RA2 is the input signal. Connect the variable power supply to this pin, or use a wire to move the output of the potentiometer from RC0 to RA2.
+
+#### External Configuration Wiring
+
+For the external components, the internal components are disabled. The exact components for this setup depend on the desired operational amplifier configuration. A list of a few standard configurations is shown below.
+
+* Non-Inverting Amplifier
+* Inverting Amplifier
+* Unity Gain Buffer
 
 ## Operation
+This code example demonstrates the 4 configurations possible with the OPA module - Unity Gain, Non-Inverting, Inverting, and External.
 
-<!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+S1 on the Curiosity board triggers a move to the next configuration.
+
+The current configuration is displayed on LEDs D4 and D5. The table below shows the order of switching, and the output function (using the default settings).
+
+| Configuration           | LEDs (D5, D4) | Output function
+| ----------------------- | ------------- | -----
+| Unity Gain              | 00            | Vout = Vin
+| Non-Inverting Amplifier | 01            | Vout = 2 x Vin
+| Inverting Amplifier     | 10            | Vout = Vdd - Vin
+| External                | 11            | Dependent on Configuration
 
 ## Summary
-
-<!-- Summarize what the example has shown -->
+This code example should demonstrate the 4 basic modes of operation possible with the OPA module on the PIC18F16Q41.
