@@ -8,7 +8,8 @@ The Operational Amplifier (OPA) module on the PIC18F6Q41 is an embedded operatio
 
 <a href="https://www.microchip.com/wwwproducts/en/PIC18F16Q41">PIC18F16Q41 Product Information</a><br>
 TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
-TBxxxx, "Optimizing Internal Operational Amplifiers for Analog Signal Conditioning"
+TBxxxx, "Optimizing Internal Operational Amplifiers for Analog Signal Conditioning"<br>
+ANxxxx, "Analog Sensor Measurement and Acquisition"
 
 ## Software Used
 
