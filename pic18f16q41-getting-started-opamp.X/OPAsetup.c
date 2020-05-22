@@ -116,9 +116,6 @@ void configureOPA_Inverting(uint8_t gain)
     OPA1CON0 = 0x80;
 }
 
-#define CLEAR_OPA_CONFIG OPA1CON0 = 0x00; OPA1CON1 = 0x00; OPA1CON2 = 0x00; OPA1CON3 = 0x00; OPA1HWC = 0x00; OPA1ORS = 0x00
-#define OPA_EXT_SETUP CLEAR_OPA_CONFIG; 
-
 void configureOPA_External(void)
 {
     clearOPAconfig();

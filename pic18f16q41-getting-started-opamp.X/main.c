@@ -46,13 +46,13 @@
 #include "OPAsetup.h"
 #include "debounce.h"
 
-/** 
+/*
  * OPA Module I/O
  * OPA1OUT = RC2
  * In+ = RA2 (Non-Inverting, Unity Gain)
  * In- = RA2 (Inverting)
  * 
- * Custom only:
+ * External only:
  * In+ = RB5 (Custom)
  * In- = RB4 (Custom)
  */

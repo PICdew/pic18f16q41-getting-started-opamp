@@ -25,8 +25,7 @@ ANxxxx, "Analog Sensor Measurement and Acquisition"
 * Parts for an external operational amplifier configuration (resistors, capacitors, etc...)
 
 ## Setup
-
-#### External Parts
+#### External Pins
 
 | Pin | Function
 | --- | --------
@@ -39,10 +38,10 @@ ANxxxx, "Analog Sensor Measurement and Acquisition"
 
 | Pin | Function
 | --- | --------
-| RA4 | LED D4 - Configuration Indicator Bit 0
-| RA0 | LED D5 - Configuration Indicator Bit 1
+| RA5 | LED D4 - Configuration Indicator Bit 0
+| RA1 | LED D5 - Configuration Indicator Bit 1
 | RA2 | LED D6 - Not used, see note below
-| RA5 | LED D7 - 2 Hz blinking light
+| RC5 | LED D7 - 2 Hz blinking light
 | RC4 | S1 - Pushbutton Switch
 | RC0 | *(if used)* Potentiometer on the Curiosity board
 
