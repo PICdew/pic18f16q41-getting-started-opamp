@@ -9,7 +9,7 @@ TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
 TBxxxx, "Optimizing Internal Operational Amplifiers for Analog Signal Conditioning"<br>
 ANxxxx, "Analog Sensor Measurement and Acquisition"
 
-The above documents will be published soon, and will cover software setup for the OPA module and recommendations for analog signal sensor interfacing.
+The above documents will be published soon. They will cover software setup for the OPA module and recommendations for analog signal sensor interfacing.
 ## Software Used
 
 * <a href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB® IDE 5.40 or newer</a>
