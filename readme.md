@@ -5,12 +5,11 @@
 The Operational Amplifier (OPA) module on the PIC18F16Q41 is an embedded operational amplifier with an internal resistor ladder. This code example demonstrates the OPA module switching between the 4 different configurations - Unity Gain, Non-Inverting, Inverting, and External.
 
 ## Related Documentation
-
-<a href="https://www.microchip.com/wwwproducts/en/PIC18F16Q41">PIC18F16Q41 Product Information</a><br>
 TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
 TBxxxx, "Optimizing Internal Operational Amplifiers for Analog Signal Conditioning"<br>
 ANxxxx, "Analog Sensor Measurement and Acquisition"
 
+The above documents will be published soon, and will cover software setup for the OPA module and recommendations for analog signal sensor interfacing.
 ## Software Used
 
 * <a href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB® IDE 5.40 or newer</a>
@@ -19,6 +18,7 @@ ANxxxx, "Analog Sensor Measurement and Acquisition"
 
 ## Hardware Used
 
+* <a href="https://www.microchip.com/wwwproducts/en/PIC18F16Q41">PIC18F16Q41 Product Information</a><br>
 * <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137"> Microchip Curiosity Development Board (DM164137) </a>
 * Variable Power Supply (0 - 5V) or Potentiometer
   * To use the built-in potentiometer on the Curiosity board, use a wire to move it from RC0 to the desired input.
@@ -52,7 +52,7 @@ For the 3 internal configurations (unity gain, non-inverting, and inverting), RA
 
 #### External Configuration Wiring
 
-For the external components, the internal components are disabled. The exact components for this setup depend on the desired operational amplifier configuration. A list of a few standard configurations is shown below.
+For the external configuration, the internal components are disabled. The exact components for this setup depend on the desired operational amplifier configuration. A list of a few standard configurations is shown below.
 
 * Non-Inverting Amplifier
 * Inverting Amplifier
@@ -65,12 +65,14 @@ S1 on the Curiosity board triggers a move to the next configuration.
 
 The current configuration is displayed on LEDs D4 and D5. The table below shows the order of switching, and the output function (using the default settings).
 
-| Configuration           | LEDs (D5, D4) | Output function
-| ----------------------- | ------------- | -----
-| Unity Gain              | 00            | Vout = Vin
-| Non-Inverting Amplifier | 01            | Vout = 2 x Vin
-| Inverting Amplifier     | 10            | Vout = Vdd - Vin
-| External                | 11            | Dependent on Configuration
+| Configuration                       | LEDs (D5, D4) | Output function
+| ----------------------------------- | ------------- | -----
+| Unity Gain                          | 00            | Vout = Vin
+| Non-Inverting Amplifier             | 01            | Vout = 2 x Vin
+| Inverting Amplifier<sup>1</sup>     | 10            | Vout = Vdd - Vin
+| External                            | 11            | Dependent on Configuration
+
+1 - The impedance of the input source may change the transfer function.
 
 ## Summary
-This code example should demonstrate the 4 basic modes of operation possible with the OPA module on the PIC18F16Q41.
+This code example demonstrates the 4 basic modes of operation possible with the OPA module on the PIC18F16Q41.
