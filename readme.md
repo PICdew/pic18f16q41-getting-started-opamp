@@ -25,27 +25,23 @@ The above documents will be published soon. They will cover software setup for t
 * Parts for an external operational amplifier configuration (resistors, capacitors, etc...)
 
 ## Setup
-#### External Pins
+#### Pin Table
 
-| Pin | Function
-| --- | --------
-| RA2 | Input for Unity Gain, Inverting, and Non-Inverting Configurations
-| RB5 | Non-Inverting Input for External Configuration
-| RB4 | Inverting Input for External Configuration
-| RC2 | OPA Module Output
+| Pin | Name          | Function
+| --- | ------------- | ---
+| RC5 | LED D7        | 2 Hz blinking light
+| RC4 | S1            | Pushbutton Switch
+| RC2 | OPA1OUT       | OPA Module Output
+| RC0 | Potentiometer | Potentiometer on the Curiosity board
+| RB5 | OPA1IN0+      | Non-Inverting Input for External Configuration
+| RB4 | OPA1IN0-      | Inverting Input for External Configuration
+| RA5 | LED D4        | Configuration Indicator Bit 0
+| RA2 | OPA1IN        | Input for Unity Gain, Inverting, and Non-Inverting Configurations.<sup>1</sup>
+| RA1 | LED D5        | Configuration Indicator Bit 1
 
-#### Parts on the Curiosity
 
-| Pin | Function
-| --- | --------
-| RA5 | LED D4 - Configuration Indicator Bit 0
-| RA1 | LED D5 - Configuration Indicator Bit 1
-| RA2 | LED D6 - Not used, see note below
-| RC5 | LED D7 - 2 Hz blinking light
-| RC4 | S1 - Pushbutton Switch
-| RC0 | *(if used)* Potentiometer on the Curiosity board
-
-Note: LED D6 (RA2) changes intensity with the input. The potentiometer is not adversely affected by the LED on the pin in this case.
+Note:
+1. LED D6 (RA2) changes intensity with the input. The input from the potentiometer is not adversely affected by the LED on the pin in this case.
 
 #### Internal Configurations Wiring
 For the 3 internal configurations (unity gain, non-inverting, and inverting), RA2 is the input signal. Connect the variable power supply to this pin, or use a wire to move the output of the potentiometer from RC0 to RA2.
@@ -61,9 +57,9 @@ For the external configuration, the internal components are disabled. The exact 
 ## Operation
 This code example demonstrates the 4 configurations possible with the OPA module - Unity Gain, Non-Inverting, Inverting, and External.
 
-S1 on the Curiosity board triggers a move to the next configuration.
+S1 on the Curiosity board switches to the next configuration.
 
-The current configuration is displayed on LEDs D4 and D5. The table below shows the order of switching, and the output function (using the default settings).
+The current configuration is displayed on LEDs D4 and D5. The table below shows the order of switching and the output function.
 
 | Configuration                       | LEDs (D5, D4) | Output function
 | ----------------------------------- | ------------- | -----
