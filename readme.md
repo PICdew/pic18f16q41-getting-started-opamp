@@ -75,11 +75,11 @@ The current configuration is displayed on LEDs D4 and D5. The table below shows 
 1 - The impedance of the input source affects the transfer function.
 
 #### Example Output: Unity Gain<br>
-<img src="images/unityGain.PNG" width="500px" alt="Unity Gain">
+<img src="images/unityGain.PNG" width="500px" alt="Unity Gain"><br>
 
 
 #### Example Output: Non-Inverting Amplifier<br>
-<img src="images/nonInverting.PNG" width="500px" alt="Non-Inverting Amplifier">
+<img src="images/nonInverting.PNG" width="500px" alt="Non-Inverting Amplifier"><br>
 
 #### Example Output: Inverting Amplifier<br>
 <img src="images/inverting.PNG" width="500px" alt="Inverting Amplifier"><br>
