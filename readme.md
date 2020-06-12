@@ -68,7 +68,7 @@ The current configuration is displayed on LEDs D4 and D5. The table below shows 
 | Inverting Amplifier<sup>1</sup>     | 10            | Vout = Vdd - Vin
 | External                            | 11            | Dependent on Configuration
 
-Note:
+Note:<br>
 1 - The impedance of the input source affects the transfer function.
 
 #### Example Output: Unity Gain<br>
