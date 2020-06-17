@@ -20,7 +20,7 @@ The above documents will be published soon. They will cover software setup for t
 
 * <a href="https://www.microchip.com/wwwproducts/en/PIC18F16Q41">PIC18F16Q41 Product Information</a><br>
 * <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137"> Microchip Curiosity Development Board (DM164137) </a>
-* Variable Power Supply (0 - 5V) or Potentiometer
+* Potentiometer or Signal Source
   * To use the built-in potentiometer on the Curiosity board, use a wire to move it from RC0 to the desired input.
 * Parts for an external operational amplifier configuration (resistors, capacitors, etc...)
 
@@ -43,8 +43,16 @@ The above documents will be published soon. They will cover software setup for t
 Note:
 1. LED D6 (RA2) changes intensity with the input. The voltage range of the potentiometer is reduced slightly due to the LED.
 
-#### Internal Configurations Wiring
-These modes of operation (unity gain, non-inverting, and inverting) utilize the internal resistor ladder or unity gain override of OPA module. No external parts are needed for these modes. The internal pin-selection multiplexer is used with each configuration to set RA2 to be the signal input. The potentiometer on RC0 can be connected to RA2 in order to avoid the need for an external power supply.
+#### Internal Configurations Wiring<br>
+<img src="images/InternalWiring.JPG" width="500px" alt="Internal Wiring"><br>
+*Wiring the internal configurations using the potentiometer*
+
+| Wire   | Name   | Function
+| ------ | ------ | --------
+| Yellow | OPA1IN | Input to the Operational Amplifier. Connect to a signal source such as RC0 (potentiometer (shown)).
+| White  | OPA1OUT | Output of the Operational Amplifier
+
+These modes of operation (unity gain, non-inverting, and inverting) utilize the internal resistor ladder or unity gain override of the OPA module. No external parts are needed for these modes. The internal pin-selection multiplexer is used with each configuration to set RA2 to be the signal input. The potentiometer on RC0 can be connected to RA2 in order to avoid the need for an external signal source.
 
 #### External Configuration Wiring
 For the external configuration, the internal feedback network is disabled, and all of the inputs to the operational amplifier are connected to I/O pins. In this mode, the OPA module on the device acts like a discrete single-supply operational amplifier.
@@ -55,7 +63,7 @@ This type of configuration is recommended when the internal ladder is not precis
 **The device will be permanently damaged by voltages above Vdd and below Vss. Do not apply these levels to any I/O on the device. Please consult the device datasheet for more information.**
 
 ## Operation
-This code example demonstrates the 4 configurations possible with the OPA module - Unity Gain, Non-Inverting, Inverting, and External.
+This code example demonstrates 4 basic configurations of the OPA module - Unity Gain, Non-Inverting, Inverting, and External.
 
 S1 on the Curiosity board switches to the next configuration.
 
