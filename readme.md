@@ -187,4 +187,4 @@ void InvertingSetup(void)
 ```
 
 ## Summary
-This code example demonstrates the 4 basic modes of operation possible with the OPA module on the PIC18F16Q41.
+The OPA module in the PIC18-Q family is a flexible analog peripheral that can be used in a number of ways. Each configuration has a specific use case that can aid in signal acquisition applications through an internal connection with the ADC. Other analog peripherals can also utilize the OPA module to unlock new use cases, for instance, the DAC output can be mirrored or tracked in output level through the module. The 4 configurations shown in this code example are the tip of the iceberg - most op-amp circuit can be modified to function on the OPA module.
