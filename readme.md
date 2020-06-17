@@ -71,8 +71,8 @@ The current configuration is displayed on LEDs D4 and D5. The table below shows 
 Note:<br>
 1 - The impedance of the input source affects the transfer function. For best results, the impedance of the source should be very low.
 
-#### Unity Gain<br>
-<img src="images/unityGainSchematic.png" width="500px" alt="Unity Gain Schematic"><br>
+#### Unity Gain <br>
+<img src="images/UnityGainSchematic.png" width="500px" alt="Unity Gain Schematic"><br>
 *Unity Gain Schematic*<br>
 
 In unity gain, the OPA module acts as a voltage buffer, tracking the input signal with the output for a gain of 1. This is most useful for sensitive signals that have a full-scale range, such as resistive voltage dividers.
