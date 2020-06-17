@@ -19,7 +19,7 @@ The above documents will be published soon. They will cover software setup for t
 ## Hardware Used
 
 * <a href="https://www.microchip.com/wwwproducts/en/PIC18F16Q41">PIC18F16Q41 Product Information</a><br>
-* <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137"> Microchip Curiosity Development Board (DM164137) </a>
+* <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137"> Microchip Curiosity Development Board (DM164137), Rev 4 </a>
 * Potentiometer or Signal Source
   * To use the built-in potentiometer on the Curiosity board, use a wire to move it from RC0 to the desired input.
 * Parts for an external operational amplifier configuration (resistors, capacitors, etc...)
