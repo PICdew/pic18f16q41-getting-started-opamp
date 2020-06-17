@@ -44,6 +44,8 @@ Note:
 1. LED D6 (RA2) changes intensity with the input. The voltage range of the potentiometer is reduced slightly due to the LED.
 
 #### Internal Configurations Wiring
+<img src="images/internalWiring.JPG" width="500px" alt="Unity Gain Schematic"><br>
+
 These modes of operation (unity gain, non-inverting, and inverting) utilize the internal resistor ladder or unity gain override of OPA module. No external parts are needed for these modes. The internal pin-selection multiplexer is used with each configuration to set RA2 to be the signal input. The potentiometer on RC0 can be connected to RA2 in order to avoid the need for an external power supply.
 
 #### External Configuration Wiring
