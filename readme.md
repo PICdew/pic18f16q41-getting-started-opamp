@@ -5,11 +5,10 @@
 On the PIC18F-Q family, the operational amplifier (OPA) module is a powerful analog peripheral. The OPA module comes with an internal resistor ladder, which can be used to create a non-inverting or inverting amplifier with no external components required. An internal switch can set the OPA module into unity gain without an external jumper wire. The OPA module also has the option for an external configuration, where the user can use externally placed components to build a custom amplifier configuration. This code example is designed to switch between and demonstrate the 4 configurations listed above -  Unity Gain, Non-Inverting Amplifier, Inverting Amplifier, and External.
 
 ## Related Documentation
-TBxxxx, "Using Operational Amplifiers in PIC16 and PIC18"<br>
-TBxxxx, "Optimizing Internal Operational Amplifiers for Analog Signal Conditioning"<br>
-ANxxxx, "Analog Sensor Measurement and Acquisition"
+TBxxxx: Using Operational Amplifiers in PIC16 and PIC18<br>
+TBxxxx: Optimizing Internal Operational Amplifiers for Analog Signal Conditioning<br>
+AN3521: Analog Sensor Measurement and Acquisition<br>
 
-The above documents will be published soon. They will cover software setup for the OPA module and recommendations for analog signal sensor interfacing.
 ## Software Used
 
 * <a href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB® IDE 5.40 or newer</a>
